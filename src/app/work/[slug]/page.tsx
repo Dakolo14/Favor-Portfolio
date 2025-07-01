@@ -9,15 +9,8 @@ const projects = {
   calmhealth: "Calm Health",
 };
 
-type PageProps = {
-  params: {
-    slug: keyof typeof projects;
-  };
-};
-
-// Metadata generator
-export function generateMetadata({ params }: PageProps): Metadata {
-  const title = projects[params.slug];
+export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+  const title = projects[params.slug as keyof typeof projects];
   if (!title) return {};
   return {
     title: `${title} | Favor Akinniyi`,
@@ -25,9 +18,8 @@ export function generateMetadata({ params }: PageProps): Metadata {
   };
 }
 
-// Page component
-export default function ProjectPage({ params }: PageProps) {
-  const title = projects[params.slug];
+export default function ProjectPage({ params }: { params: { slug: string } }) {
+  const title = projects[params.slug as keyof typeof projects];
   if (!title) return notFound();
 
   return (
