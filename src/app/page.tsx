@@ -9,7 +9,7 @@ export default function Page() {
       <section id="reels" className="reels-section reels-section--spaced">
         {/* Video reel will go here */}
         <div className="reel-placeholder">
-          Favor Reel Placeholder
+          Favor Reel Placeholders
         </div>
       </section>
       <section className="work-section">
