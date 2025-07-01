@@ -7,7 +7,9 @@ const projects = {
   calmhealth: "Calm Health",
 };
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
+type Props = { params: { slug: string } };
+
+export function generateMetadata({ params }: Props) {
   const title = projects[params.slug as keyof typeof projects];
   if (!title) return {};
   return {
@@ -16,7 +18,7 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
+export default function ProjectPage({ params }: Props) {
   const title = projects[params.slug as keyof typeof projects];
   if (!title) return notFound();
   return (
