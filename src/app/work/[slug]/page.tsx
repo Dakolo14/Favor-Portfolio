@@ -9,7 +9,7 @@ const projects = {
   calmhealth: "Calm Health",
 };
 
-export function generateMetadata({ params }: { params: { slug: string } }): Metadata {
+export function generateMetadata({ params }: any): Metadata {
   const title = projects[params.slug as keyof typeof projects];
   if (!title) return {};
   return {
@@ -18,7 +18,11 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   };
 }
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
+export function generateStaticParams() {
+  return Object.keys(projects).map(slug => ({ slug }));
+}
+
+export default function ProjectPage({ params }: any) {
   const title = projects[params.slug as keyof typeof projects];
   if (!title) return notFound();
 
