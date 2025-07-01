@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
   {
@@ -9,13 +10,13 @@ const projects = [
   },
   {
     slug: "ipaidthat",
-    image: "/work2.png",
+    image: "/work2.jpg",
     title: "iPaidThat",
     subtitle: "The all in one accounting tool",
   },
   {
     slug: "alchemy",
-    image: "/work3.png",
+    image: "/work3.jpg",
     title: "Alchemy",
     subtitle: "The era of blockchain",
   },
@@ -46,7 +47,7 @@ export default function Projects({ limit }: { limit?: number } = {}) {
       {displayProjects.map((item) => (
         <Link href={`/work/${item.slug}`} className="work-item" key={item.slug}>
           <div className="work-thumb-container">
-            <img src={item.image} alt={item.title} className="work-thumb" />
+            <Image src={item.image} alt={item.title} className="work-thumb" fill sizes="(max-width: 700px) 100vw, 50vw" style={{objectFit: 'cover'}} />
             <div className="work-overlay" />
           </div>
           <div className="work-info">
