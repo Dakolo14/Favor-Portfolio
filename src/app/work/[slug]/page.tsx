@@ -1,4 +1,6 @@
+// src/app/work/[slug]/page.tsx
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 
 const projects = {
   kongapay: "KongaPay",
@@ -7,10 +9,15 @@ const projects = {
   calmhealth: "Calm Health",
 };
 
-type Props = { params: { slug: string } };
+type PageProps = {
+  params: {
+    slug: keyof typeof projects;
+  };
+};
 
-export function generateMetadata({ params }: Props) {
-  const title = projects[params.slug as keyof typeof projects];
+// Metadata generator
+export function generateMetadata({ params }: PageProps): Metadata {
+  const title = projects[params.slug];
   if (!title) return {};
   return {
     title: `${title} | Favor Akinniyi`,
@@ -18,12 +25,24 @@ export function generateMetadata({ params }: Props) {
   };
 }
 
-export default function ProjectPage({ params }: Props) {
-  const title = projects[params.slug as keyof typeof projects];
+// Page component
+export default function ProjectPage({ params }: PageProps) {
+  const title = projects[params.slug];
   if (!title) return notFound();
+
   return (
-    <main style={{minHeight: '60vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fff', fontSize: '2.5rem', fontWeight: 700}}>
+    <main
+      style={{
+        minHeight: "60vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "#fff",
+        fontSize: "2.5rem",
+        fontWeight: 700,
+      }}
+    >
       {title}
     </main>
   );
-} 
+}
