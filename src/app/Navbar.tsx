@@ -18,7 +18,7 @@ export default function Navbar() {
         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12" /><line x1="3" y1="6" x2="21" y2="6" /><line x1="3" y1="18" x2="21" y2="18" /></svg>
       </button>
       <div className={`navbar-right${navOpen ? " open" : ""}`} onClick={() => setNavOpen(false)}>
-        <a href="/work" className="nav-item">Work</a>
+        <Link href="/work" className="nav-item">Work</Link>
         <Link href="/about" className="nav-item">About</Link>
         <Link href="/contact" className="nav-item">Contact</Link>
         <a href="https://instagram.com" className="nav-item" target="_blank" rel="noopener noreferrer" aria-label="Instagram">

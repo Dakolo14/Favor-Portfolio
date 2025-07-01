@@ -1,38 +1,8 @@
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
-
-const workItems = [
-  {
-    image: "/work1.png",
-    title: "KongaPay",
-    subtitle: "Empowering Growth for Businesses and Individuals",
-  },
-  {
-    image: "/work2.png",
-    title: "iPaidThat",
-    subtitle: "The all in one accounting tool for small businesses",
-  },
-  {
-    image: "/work3.png",
-    title: "iPaidThat",
-    subtitle: "The all in one accounting tool for small businesses",
-  },
-  {
-    image: "/work4.jpg",
-    title: "iPaidThat",
-    subtitle: "The all in one accounting tool for small businesses",
-  },
-];
+import Link from "next/link";
 
 export default function Page() {
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const reelsSection = document.getElementById("reels");
-    if (reelsSection) {
-      reelsSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <>
       <Hero />
@@ -45,7 +15,7 @@ export default function Page() {
       <section className="work-section">
         <Projects limit={4} />
         <div className="view-more-container">
-          <a href="/work" className="view-more-btn">View more work</a>
+          <Link href="/work" className="view-more-btn">View more work</Link>
         </div>
       </section>
     </>

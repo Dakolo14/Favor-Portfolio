@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <main className="hero">
       <header className="hero-header">
-        <h1 className="hero-title">Hello there, I'm Favor</h1>
+        <h1 className="hero-title">Hello there, I&apos;m Favor</h1>
         <p className="hero-subtitle">A graphic designer and UX motion specialist based in Nigeria.</p>
         <a href="#reels" className="hero-link" onClick={handleScroll}>
           Scroll down

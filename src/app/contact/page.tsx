@@ -7,9 +7,9 @@ export default function ContactPage() {
   return (
     <main className="contact-main">
       <div className="contact-container">
-        <h1 className="contact-title">Let's Connect</h1>
+        <h1 className="contact-title">Let&apos;s Connect</h1>
         <p className="contact-text">
-          I'm always open to new projects, collaborations, or just a friendly chat about design, motion, or animation.<br /><br />
+          I&apos;m always open to new projects, collaborations, or just a friendly chat about design, motion, or animation.<br /><br />
           You can reach me directly at:
         </p>
         <a href="mailto:Favorakinniyi@gmail.com" className="contact-link">Favorakinniyi@gmail.com</a>
