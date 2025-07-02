@@ -10,13 +10,13 @@ const projects = [
   },
   {
     slug: "ipaidthat",
-    image: "/work2.jpg",
+    image: "/work2.png",
     title: "iPaidThat",
     subtitle: "The all in one accounting tool",
   },
   {
     slug: "alchemy",
-    image: "/work3.jpg",
+    image: "/work3.png",
     title: "Alchemy",
     subtitle: "The era of blockchain",
   },
@@ -27,13 +27,13 @@ const projects = [
     subtitle: "Calm Health Project",
   },
   {
-    slug: "KongaHealth",
+    slug: "kongahealth",
     image: "/work1.png",
     title: "Konga Health",
     subtitle: "Konga Health Project",
   },
   {
-    slug: "Kongae_commerce",
+    slug: "kongae_commerce",
     image: "/work3.png",
     title: "Konga E-commerce",
     subtitle: "Konga E-commerce Project",
